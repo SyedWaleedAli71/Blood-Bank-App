@@ -1,0 +1,201 @@
+/* Keyframes */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-18px); }
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.5); }
+  50%       { box-shadow: 0 0 0 12px rgba(220, 38, 38, 0); }
+}
+
+/* Animation classes */
+.animate-fade-down { animation: fadeDown 0.8s ease forwards; }
+.animate-fade-up   { animation: fadeUp  0.8s ease forwards; opacity: 0; }
+.animate-float     { animation: float 3.5s ease-in-out infinite; }
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+/* Layout */
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a0000 50%, #0f0f0f 100%);
+  position: relative;
+  overflow: hidden;
+  gap: 2rem;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(220, 38, 38, 0.15), transparent 70%);
+  top: -100px;
+  right: 20%;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23dc2626' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Content */
+.home-content {
+  flex: 1;
+  max-width: 580px;
+  z-index: 1;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(220, 38, 38, 0.15);
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  color: #f87171;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.home-content h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+}
+
+.home-content h1 span {
+  color: #dc2626;
+  text-shadow: 0 0 30px rgba(220, 38, 38, 0.5);
+}
+
+.home-content > p {
+  color: #a1a1aa;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.home-content > p strong {
+  color: #f87171;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #dc2626;
+  margin: 0;
+}
+
+.stat p {
+  font-size: 0.8rem;
+  color: #71717a;
+  margin: 2px 0 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  padding: 14px 32px;
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+  background: #b91c1c;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  padding: 14px 32px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.btn-secondary:hover {
+  border-color: #dc2626;
+  color: #f87171;
+  transform: scale(1.05);
+}
+
+/* Hero Image */
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  max-width: 480px;
+}
+
+.home-image img {
+  width: 100%;
+  max-width: 440px;
+  filter: drop-shadow(0 0 40px rgba(220, 38, 38, 0.35));
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 6rem 6% 4rem;
+  }
+
+  .stats { justify-content: center; }
+  .buttons { justify-content: center; }
+
+  .home-image {
+    max-width: 280px;
+    order: -1;
+  }
+}
