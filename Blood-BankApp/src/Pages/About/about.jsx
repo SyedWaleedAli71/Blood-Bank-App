@@ -1,5 +1,5 @@
 import "./about.css";
-import doctorImg from "../../assets/Images/doctor.jpg";
+import doctorImg from "../../assets/Images/treatments2.jpg";
 import donarImg from "../../assets/Images/donar1.jpg";
 import heartImg from "../../assets/Images/heart.jpg";
 import BloodDrop from "../../assets/Icons/BloodDrop.png";

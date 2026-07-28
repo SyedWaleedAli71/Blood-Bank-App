@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import BloodDrop from "../../assets/Icons/BloodDrop.png";
 import "./navbar.css";
@@ -11,10 +11,17 @@ const navItems = [
 ];
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen]       = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="navbar">
+    <header className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
       <div className="navbar__container">
 
         {/* Logo */}
@@ -44,7 +51,7 @@ const Navbar = () => {
                   }
                   onClick={() => setOpen(false)}
                 >
-                  {item.name}
+                  <span className="link-text">{item.name}</span>
                 </NavLink>
               </li>
             ))}

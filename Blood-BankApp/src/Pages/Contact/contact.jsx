@@ -33,14 +33,14 @@ function Contact() {
               <img src={BloodDrop} alt="Email" />
               <div>
                 <h4>Email Us</h4>
-                <p>bloodbank@example.com</p>
+                <p>syedwaleed887@gmail.com</p>
               </div>
             </div>
             <div className="info-card">
               <img src={Clinic} alt="Phone" />
               <div>
                 <h4>Call Us</h4>
-                <p>+92 300 0000000</p>
+                <p>+92 312 2122216</p>
               </div>
             </div>
             <div className="info-card">
@@ -66,6 +66,7 @@ function Contact() {
             <select>
               <option value="">Select Request Type</option>
               <option value="donate">I Want to Donate</option>
+              <option value="other">Donors</option>
               <option value="request">Request Blood</option>
               <option value="other">Other Inquiry</option>
             </select>
