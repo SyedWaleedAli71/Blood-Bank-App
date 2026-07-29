@@ -1,14 +1,13 @@
 import "./home.css";
-
 import Hero from "./components/Hero";
 import Stats from "./components/Stats";
 import WhyChoose from "./components/WhyChoose";
+import BloodBankFeatures from "./components/BloodBankFeatures";
 import BloodGroups from "./components/BloodGroups";
 import HowItWorks from "./components/HowItWorks";
 import EmergencyCTA from "./components/EmergencyCTA";
 import FAQ from "./components/FAQ";
 import Testimonials from "./components/Testimonials";
-
 
 import { useEffect } from "react";
 
@@ -37,11 +36,12 @@ function Home() {
       <Hero />
       <Stats />
       <WhyChoose />
+      <BloodBankFeatures />
       <BloodGroups />
       <HowItWorks />
       <Testimonials />
-      <EmergencyCTA />
       <FAQ />
+      <EmergencyCTA /> 
     </main>
   );
 }

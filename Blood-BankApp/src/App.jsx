@@ -5,6 +5,10 @@ import Home from "./Pages/Home/home";
 import About from "./Pages/About/about";
 import Contact from "./Pages/Contact/contact";
 import Dashboard from "./Pages/Dashboard/Dashboard";
+import Footer from './Components/Footer/Footer.jsx'
+import WhatsAppButton from './Components/WhatsAppButton/WhatsAppButton.jsx';
+
+
 
 function App() {
   return (
@@ -16,6 +20,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
+       <Footer />
+       <WhatsAppButton />
     </>
   )
 }

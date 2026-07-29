@@ -1,18 +1,18 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./Testimonials.css";
-import t1 from "../../../assets/Images/donar1.jpg";
-import t2 from "../../../assets/Images/doctor.jpg";
-import t3 from "../../../assets/Images/heart.jpg";
-import t4 from "../../../assets/Images/heart2.jpg";
-import t5 from "../../../assets/Images/heart3.jpg";
-import t6 from "../../../assets/Images/blooding.jpg";
+import t1 from "../../../assets/Images/me1.jpeg";
+import t2 from "../../../assets/Images/donar2.png";
+import t3 from "../../../assets/Images/donar5.avif";
+import t4 from "../../../assets/Images/donar4.png";
+import t5 from "../../../assets/Images/donar6.avif";
+import t6 from "../../../assets/Images/donar3.png";
 
 const slides = [
-  { img: t1, name: "Aisha", role: "Volunteer", text: "Quick process and professional staff. Glad to help!" },
-  { img: t2, name: "Omar", role: "Donor", text: "Found the nearest drive and booked in minutes." },
+  { img: t1, name: "Waleed", role: "Volunteer", text: "Quick process and professional staff. Glad to help!" },
+  { img: t2, name: "Umar", role: "Donor", text: "Found the nearest drive and booked in minutes." },
   { img: t3, name: "Sara", role: "Nurse", text: "Reliable supply and efficient matching for patients." },
   { img: t4, name: "Hassan", role: "Student", text: "Friendly team and clear instructions throughout." },
-  { img: t5, name: "Lina", role: "Teacher", text: "A small act that made a big difference for someone I know." },
+  { img: t5, name: "Zoha", role: "Teacher", text: "A small act that made a big difference for someone I know." },
   { img: t6, name: "Bilal", role: "Engineer", text: "The app made donation scheduling effortless." },
 ];
 
