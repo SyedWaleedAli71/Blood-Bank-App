@@ -1,0 +1,5 @@
+/* Scoped Hero styles (component-specific) */
+.blood-home .hero-section { /* layout handled in home.css; keep small scope */ }
+.blood-home .hero-inner { display:flex; gap:2rem; align-items:center; justify-content:space-between; }
+.blood-home .hero-copy h1 span { color: #dc2626; }
+.blood-home .hero-media img { border-radius:12px; }

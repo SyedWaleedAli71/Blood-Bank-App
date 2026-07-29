@@ -1,48 +1,48 @@
 import "./home.css";
-import heroImg from "../../assets/Images/doctor.jpg";
+
+import Hero from "./components/Hero";
+import Stats from "./components/Stats";
+import WhyChoose from "./components/WhyChoose";
+import BloodGroups from "./components/BloodGroups";
+import HowItWorks from "./components/HowItWorks";
+import EmergencyCTA from "./components/EmergencyCTA";
+import FAQ from "./components/FAQ";
+import Testimonials from "./components/Testimonials";
+
+
+import { useEffect } from "react";
 
 function Home() {
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-in");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    const nodes = document.querySelectorAll(".blood-home .reveal");
+    nodes.forEach((n) => obs.observe(n));
+
+    return () => obs.disconnect();
+  }, []);
+
   return (
-    <section className="home">
-      <div className="overlay"></div>
-
-      <div className="home-content">
-        <div className="badge animate-fade-down">🩸 Save Lives Today</div>
-
-        <h1 className="animate-fade-up">
-          Donate Blood, <span>Save Lives</span>
-        </h1>
-
-        <p className="animate-fade-up delay-1">
-          Every drop counts. Join thousands of donors and help patients in need.
-          Your one donation can save up to <strong>3 lives</strong>.
-        </p>
-
-        <div className="stats animate-fade-up delay-2">
-          <div className="stat">
-            <h3>10K+</h3>
-            <p>Donors</p>
-          </div>
-          <div className="stat">
-            <h3>50K+</h3>
-            <p>Lives Saved</p>
-          </div>
-          <div className="stat">
-            <h3>100+</h3>
-            <p>Blood Banks</p>
-          </div>
-        </div>
-
-        <div className="buttons animate-fade-up delay-3">
-          <button className="btn-primary">Donate Now</button>
-          <button className="btn-secondary">Find Blood</button>
-        </div>
-      </div>
-
-      <div className="home-image animate-float">
-        <img src={heroImg} alt="Blood Donation" />
-      </div>
-    </section>
+    <main className="blood-home">
+      <Hero />
+      <Stats />
+      <WhyChoose />
+      <BloodGroups />
+      <HowItWorks />
+      <Testimonials />
+      <EmergencyCTA />
+      <FAQ />
+    </main>
   );
 }
 
