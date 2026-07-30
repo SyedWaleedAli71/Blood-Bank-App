@@ -1,0 +1,595 @@
+/* =========================================
+   DASHBOARD HERO
+   Blood Bank Theme
+   Dark Red + Black + White
+========================================= */
+
+.dashboard-hero {
+  position: relative;
+  width: 100%;
+  padding: 55px 0 35px;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.dashboard-hero__content {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 35px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.dashboard-hero__text {
+  position: relative;
+
+  padding: 48px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border: 1px solid rgba(139, 0, 0, 0.15);
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.15),
+    0 0 35px rgba(139, 0, 0, 0.08);
+
+  overflow: hidden;
+
+  animation: dashboardHeroFade 0.8s ease both;
+}
+
+
+/* Decorative red glow */
+
+.dashboard-hero__text::before {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  right: -100px;
+  top: -100px;
+
+  background: rgba(139, 0, 0, 0.08);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   BADGE
+========================================= */
+
+.dashboard-hero__badge {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px 16px;
+
+  background: rgba(139, 0, 0, 0.08);
+
+  border: 1px solid rgba(139, 0, 0, 0.16);
+
+  border-radius: 50px;
+
+  color: #8b0000;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.dashboard-hero__text h1 {
+  position: relative;
+
+  margin: 22px 0 18px;
+
+  color: #080808;
+
+  font-size: clamp(38px, 4.3vw, 65px);
+
+  line-height: 1.05;
+
+  font-weight: 900;
+
+  letter-spacing: -2px;
+
+  max-width: 800px;
+}
+
+.dashboard-hero__text h1 span {
+  color: #8b0000;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.dashboard-hero__text > p {
+  max-width: 700px;
+
+  margin: 0 0 30px;
+
+  color: #555555;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.dashboard-hero__actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  flex-wrap: wrap;
+}
+
+
+.dashboard-hero__btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 50px;
+
+  padding: 13px 21px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* Primary */
+
+.dashboard-hero__btn--primary {
+  color: #ffffff;
+
+  background: #8b0000;
+
+  box-shadow:
+    0 10px 25px rgba(139, 0, 0, 0.25);
+}
+
+
+.dashboard-hero__btn--primary:hover {
+  transform: translateY(-4px);
+
+  background: #a50000;
+
+  box-shadow:
+    0 15px 35px rgba(139, 0, 0, 0.35);
+}
+
+
+/* Secondary */
+
+.dashboard-hero__btn--secondary {
+  color: #8b0000;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(139, 0, 0, 0.25);
+}
+
+
+.dashboard-hero__btn--secondary:hover {
+  transform: translateY(-4px);
+
+  color: #ffffff;
+
+  background: #111111;
+
+  border-color: #111111;
+
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================
+   RIGHT SUPPORT CARD
+========================================= */
+
+.dashboard-hero__support {
+  position: relative;
+
+  min-height: 410px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #8b0000 0%,
+      #650000 55%,
+      #090909 100%
+    );
+
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.3);
+
+  animation:
+    dashboardHeroFade 0.9s ease 0.15s both;
+}
+
+
+/* =========================================
+   SUPPORT CONTENT
+========================================= */
+
+.dashboard-hero__support-content {
+  position: relative;
+
+  z-index: 3;
+
+  height: 100%;
+
+  padding: 38px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+.dashboard-hero__support-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  padding: 8px 13px;
+
+  background: rgba(255, 255, 255, 0.14);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 50px;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+
+/* Live Dot */
+
+.dashboard-hero__live-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+
+  animation: livePulse 1.5s infinite;
+}
+
+
+/* =========================================
+   HEART
+========================================= */
+
+.dashboard-hero__heart {
+  margin-top: 28px;
+
+  color: #ffffff;
+
+  filter:
+    drop-shadow(0 0 14px rgba(255, 255, 255, 0.2));
+
+  animation: heartBeat 2s infinite;
+}
+
+
+/* =========================================
+   SUPPORT HEADING
+========================================= */
+
+.dashboard-hero__support h2 {
+  margin: 17px 0 12px;
+
+  color: #ffffff;
+
+  font-size: clamp(28px, 3vw, 42px);
+
+  line-height: 1.1;
+
+  font-weight: 900;
+}
+
+
+.dashboard-hero__support h2 span {
+  color: #ffb3b3;
+}
+
+
+.dashboard-hero__support p {
+  max-width: 380px;
+
+  margin: 0 0 24px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   REQUEST LINK
+========================================= */
+
+.dashboard-hero__support-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  transition:
+    gap 0.3s ease,
+    color 0.3s ease;
+}
+
+
+.dashboard-hero__support-link:hover {
+  gap: 14px;
+
+  color: #ffb3b3;
+}
+
+
+/* =========================================
+   DECORATIVE CIRCLES
+========================================= */
+
+.dashboard-hero__circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  pointer-events: none;
+}
+
+
+.dashboard-hero__circle--one {
+  width: 300px;
+  height: 300px;
+
+  right: -150px;
+  top: -80px;
+}
+
+
+.dashboard-hero__circle--two {
+  width: 230px;
+  height: 230px;
+
+  right: -90px;
+  bottom: -120px;
+
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes dashboardHeroFade {
+  from {
+    opacity: 0;
+
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes heartBeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1.08);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.06);
+  }
+}
+
+
+@keyframes livePulse {
+  0% {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.5);
+
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .dashboard-hero {
+    padding-top: 35px;
+  }
+
+  .dashboard-hero__content {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .dashboard-hero__support {
+    min-height: 350px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .dashboard-hero {
+    padding: 25px 0;
+  }
+
+  .dashboard-hero__content {
+    width: 94%;
+  }
+
+  .dashboard-hero__text {
+    padding: 30px 23px;
+
+    border-radius: 20px;
+  }
+
+  .dashboard-hero__badge {
+    font-size: 10px;
+
+    letter-spacing: 0.5px;
+  }
+
+  .dashboard-hero__text h1 {
+    font-size: 38px;
+
+    letter-spacing: -1px;
+  }
+
+  .dashboard-hero__text > p {
+    font-size: 15px;
+
+    line-height: 1.6;
+  }
+
+  .dashboard-hero__actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .dashboard-hero__btn {
+    width: 100%;
+  }
+
+  .dashboard-hero__support {
+    min-height: 390px;
+
+    border-radius: 20px;
+  }
+
+  .dashboard-hero__support-content {
+    padding: 28px 24px;
+  }
+
+}

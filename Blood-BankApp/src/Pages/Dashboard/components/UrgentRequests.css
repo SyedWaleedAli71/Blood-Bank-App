@@ -1,0 +1,690 @@
+/* =========================================
+   URGENT BLOOD REQUESTS
+========================================= */
+
+.urgent-requests {
+  width: 100%;
+  max-width: 1200px;
+  margin: 70px auto 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.urgent-requests__header {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.urgent-requests__header > div {
+  min-width: 0;
+}
+
+.urgent-requests__eyebrow {
+  display: inline-block;
+  margin: 0 0 8px;
+
+  color: #8b0000;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.urgent-requests__header h2 {
+  margin: 0;
+
+  color: #151b2d;
+
+  font-size: clamp(26px, 4vw, 34px);
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.urgent-requests__header p {
+  margin: 9px 0 0;
+
+  color: #7c8496;
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   LIVE BADGE
+========================================= */
+
+.urgent-requests__live {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 10px 15px;
+
+  color: #8b0000;
+
+  background: #fff0f1;
+
+  border: 1px solid rgba(139, 0, 0, 0.15);
+
+  border-radius: 30px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.urgent-requests__live-dot {
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  background: #dc2626;
+
+  border-radius: 50%;
+
+  animation: livePulse 1.6s infinite;
+}
+
+
+/* =========================================
+   LIST
+========================================= */
+
+.urgent-requests__list {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+
+/* =========================================
+   REQUEST CARD
+========================================= */
+
+.urgent-request-card {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns: 72px minmax(0, 1fr) auto auto;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 20px 22px;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border: 1px solid rgba(139, 0, 0, 0.1);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 25px rgba(95, 20, 30, 0.06);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.urgent-request-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 4px;
+
+  background: #8b0000;
+}
+
+.urgent-request-card:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(139, 0, 0, 0.25);
+
+  box-shadow:
+    0 15px 35px rgba(95, 20, 30, 0.12);
+}
+
+
+/* =========================================
+   BLOOD GROUP
+========================================= */
+
+.urgent-request-card__blood {
+  width: 60px;
+  height: 60px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 2px;
+
+  color: #8b0000;
+
+  background: #fff0f1;
+
+  border: 1px solid rgba(139, 0, 0, 0.12);
+
+  border-radius: 15px;
+
+  transition: 0.3s ease;
+}
+
+.urgent-request-card:hover .urgent-request-card__blood {
+  color: white;
+
+  background: #8b0000;
+
+  transform: scale(1.05);
+}
+
+.urgent-request-card__blood strong {
+  font-size: 15px;
+}
+
+
+/* =========================================
+   INFO
+========================================= */
+
+.urgent-request-card__info {
+  min-width: 0;
+}
+
+.urgent-request-card__info h3 {
+  margin: 0 0 8px;
+
+  color: #151b2d;
+
+  font-size: 17px;
+  line-height: 1.3;
+  font-weight: 800;
+
+  overflow-wrap: anywhere;
+}
+
+.urgent-request-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px 14px;
+}
+
+.urgent-request-card__meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #858c9d;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   PRIORITY
+========================================= */
+
+.urgent-request-card__priority {
+  flex-shrink: 0;
+}
+
+.priority-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 8px 12px;
+
+  color: #8b0000;
+
+  background: #fff0f1;
+
+  border: 1px solid rgba(139, 0, 0, 0.12);
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   PRIORITY COLORS
+========================================= */
+
+.priority-urgent::before {
+  background: #8b0000;
+}
+
+.priority-urgent .priority-badge {
+  color: #8b0000;
+}
+
+.priority-high::before {
+  background: #dc2626;
+}
+
+.priority-high .priority-badge {
+  color: #dc2626;
+}
+
+.priority-medium::before {
+  background: #9f1239;
+}
+
+.priority-medium .priority-badge {
+  color: #9f1239;
+}
+
+
+/* =========================================
+   CALL BUTTON
+========================================= */
+
+.urgent-request-card__call {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-width: 82px;
+
+  padding: 11px 15px;
+
+  box-sizing: border-box;
+
+  color: white;
+
+  background: #8b0000;
+
+  border: 1px solid #8b0000;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.urgent-request-card__call:hover {
+  transform: translateY(-3px);
+
+  background: #a80000;
+
+  box-shadow:
+    0 8px 20px rgba(139, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+  .urgent-requests {
+    margin-top: 55px;
+    padding: 0 18px;
+  }
+
+  .urgent-request-card {
+    grid-template-columns: 62px minmax(0, 1fr) auto;
+    gap: 16px;
+    padding: 18px;
+  }
+
+  .urgent-request-card__blood {
+    width: 56px;
+    height: 56px;
+  }
+
+  .urgent-request-card__priority {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .urgent-request-card__call {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .urgent-requests {
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 45px;
+
+    padding: 0 14px;
+
+    box-sizing: border-box;
+  }
+
+
+  /* Header */
+
+  .urgent-requests__header {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+  }
+
+  .urgent-requests__eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.2px;
+  }
+
+  .urgent-requests__header h2 {
+    font-size: 27px;
+    line-height: 1.2;
+  }
+
+  .urgent-requests__header p {
+    max-width: 420px;
+
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .urgent-requests__live {
+    padding: 9px 14px;
+  }
+
+
+  /* List */
+
+  .urgent-requests__list {
+    gap: 14px;
+  }
+
+
+  /* Card */
+
+  .urgent-request-card {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 60px minmax(0, 1fr);
+
+    grid-template-areas:
+      "blood info"
+      "blood meta"
+      "priority call";
+
+    align-items: start;
+
+    gap: 10px 13px;
+
+    padding: 18px 16px 18px 20px;
+
+    border-radius: 17px;
+
+    box-sizing: border-box;
+  }
+
+
+  /* Blood */
+
+  .urgent-request-card__blood {
+    grid-area: blood;
+
+    width: 56px;
+    height: 56px;
+
+    margin-top: 1px;
+  }
+
+
+  /* Info */
+
+  .urgent-request-card__info {
+    grid-area: info;
+
+    min-width: 0;
+  }
+
+  .urgent-request-card__info h3 {
+    margin: 0;
+
+    font-size: 17px;
+
+    line-height: 1.35;
+
+    overflow-wrap: anywhere;
+  }
+
+
+  /* Meta */
+
+  .urgent-request-card__meta {
+    grid-area: meta;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 5px;
+
+    margin-top: 2px;
+  }
+
+  .urgent-request-card__meta span {
+    font-size: 12px;
+  }
+
+
+  /* Priority */
+
+  .urgent-request-card__priority {
+    grid-area: priority;
+
+    grid-column: auto;
+
+    grid-row: auto;
+
+    align-self: center;
+
+    justify-self: start;
+  }
+
+  .priority-badge {
+    padding: 7px 11px;
+
+    font-size: 11px;
+  }
+
+
+  /* Call */
+
+  .urgent-request-card__call {
+    grid-area: call;
+
+    grid-column: auto;
+
+    grid-row: auto;
+
+    justify-self: end;
+
+    align-self: center;
+
+    min-width: 88px;
+
+    padding: 10px 14px;
+
+    font-size: 13px;
+  }
+
+
+  /* Disable hover movement on touch */
+
+  .urgent-request-card:hover {
+    transform: none;
+  }
+
+  .urgent-request-card:hover .urgent-request-card__blood {
+    transform: none;
+
+    color: #8b0000;
+
+    background: #fff0f1;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .urgent-requests {
+    padding: 0 10px;
+  }
+
+  .urgent-requests__header h2 {
+    font-size: 24px;
+  }
+
+  .urgent-requests__header p {
+    font-size: 13px;
+  }
+
+  .urgent-request-card {
+    grid-template-columns: 52px minmax(0, 1fr);
+
+    gap: 9px 10px;
+
+    padding: 15px 12px 15px 16px;
+  }
+
+  .urgent-request-card__blood {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 13px;
+  }
+
+  .urgent-request-card__blood strong {
+    font-size: 14px;
+  }
+
+  .urgent-request-card__info h3 {
+    font-size: 16px;
+  }
+
+  .urgent-request-card__meta span {
+    font-size: 11px;
+  }
+
+  .priority-badge {
+    padding: 6px 9px;
+
+    font-size: 10px;
+  }
+
+  .urgent-request-card__call {
+    min-width: 76px;
+
+    padding: 9px 11px;
+
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes livePulse {
+
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(220, 38, 38, 0.45);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 8px rgba(220, 38, 38, 0);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(220, 38, 38, 0);
+  }
+}

@@ -1,0 +1,279 @@
+/* =========================================
+   DASHBOARD MODULES
+   Blood Bank Theme
+========================================= */
+
+.dashboard-modules {
+  width: 100%;
+  margin-top: 35px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.dashboard-modules__heading {
+  margin-bottom: 22px;
+}
+
+.dashboard-modules__eyebrow {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  color: #dc2626;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.dashboard-modules__heading h2 {
+  margin: 0;
+
+  color: #151b2d;
+
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.dashboard-modules__heading p {
+  margin: 8px 0 0;
+
+  color: #7c8496;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.dashboard-modules__grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.dashboard-module-card {
+  position: relative;
+
+  min-height: 245px;
+
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  text-decoration: none;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  border: 1px solid rgba(220, 38, 38, 0.12);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 10px 30px rgba(95, 20, 30, 0.07);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* Red top line */
+
+.dashboard-module-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    #8b0000,
+    #dc2626,
+    #ff4d5a
+  );
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform 0.35s ease;
+}
+
+
+/* Hover */
+
+.dashboard-module-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(220, 38, 38, 0.35);
+
+  box-shadow:
+    0 20px 45px rgba(95, 20, 30, 0.14);
+}
+
+.dashboard-module-card:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.dashboard-module-card__icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  color: #dc2626;
+
+  background: linear-gradient(
+    135deg,
+    #fff0f1,
+    #ffe2e5
+  );
+
+  border: 1px solid rgba(220, 38, 38, 0.12);
+
+  border-radius: 17px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.dashboard-module-card:hover .dashboard-module-card__icon {
+  transform: scale(1.08) rotate(-3deg);
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #8b0000,
+    #dc2626
+  );
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.dashboard-module-card__content {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+.dashboard-module-card__content h3 {
+  margin: 0 0 10px;
+
+  color: #151b2d;
+
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.dashboard-module-card__content p {
+  margin: 0;
+
+  color: #7c8496;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================
+   OPEN LINK
+========================================= */
+
+.dashboard-module-card__link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: auto;
+  padding-top: 20px;
+
+  color: #dc2626;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  transition: gap 0.3s ease;
+}
+
+.dashboard-module-card:hover .dashboard-module-card__link {
+  gap: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .dashboard-modules__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .dashboard-modules {
+    margin-top: 25px;
+  }
+
+  .dashboard-modules__heading h2 {
+    font-size: 25px;
+  }
+
+  .dashboard-modules__grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .dashboard-module-card {
+    min-height: 220px;
+
+    padding: 22px;
+  }
+
+}
