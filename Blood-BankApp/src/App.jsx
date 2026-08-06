@@ -7,6 +7,8 @@ import Contact from "./Pages/Contact/contact";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Footer from './Components/Footer/Footer.jsx'
 import WhatsAppButton from './Components/WhatsAppButton/WhatsAppButton.jsx';
+import Signup from "./Pages/Auth/Signup.jsx";
+import Login from "./Pages/Auth/Login.jsx";
 
 
 
@@ -18,6 +20,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+
+<Route path="/signup" element={<Signup />} />
+<Route path="/login" element={<Login />} />
+
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
        <Footer />

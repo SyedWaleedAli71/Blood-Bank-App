@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.signup-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg,#230000,#510000,#850000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.signup-card {
+  width: 420px;
+  background: rgba(255,255,255,.08);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 35px;
+  border:1px solid rgba(255,255,255,.15);
+}
+
+.signup-card h1{
+    color:white;
+    text-align:center;
+}
+
+.signup-card p{
+    color:#ddd;
+    text-align:center;
+    margin:10px 0 25px;
+}
+
+.signup-card form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.signup-card input,
+.signup-card select{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+}
+
+.signup-card button{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#b30000;
+    color:white;
+    cursor:pointer;
+    font-size:17px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.signup-card button:hover{
+    background:#ff0000;
+}
+/* Login Link */
+.login-text {
+  margin-top: 20px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.login-link {
+  color: #ff4d4d;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.login-link:hover {
+  color: #ff1a1a;
+  text-decoration: underline;
+}
