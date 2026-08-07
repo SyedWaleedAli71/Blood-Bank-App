@@ -53,10 +53,10 @@ const role =
     await setDoc(doc(db, "users", user.uid), {
       uid: user.uid,
       fullName: formData.fullName,
-      email: formData.email,
+      email: formData.email.trim().toLowerCase(),
       phone: formData.phone,
       bloodGroup: formData.bloodGroup,
-      role: role,
+      role,
       createdAt: new Date(),
     });
 

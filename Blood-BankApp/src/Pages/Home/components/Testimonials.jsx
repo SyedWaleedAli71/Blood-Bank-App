@@ -8,7 +8,7 @@ import t5 from "../../../assets/Images/donar6.avif";
 import t6 from "../../../assets/Images/donar3.png";
 
 const slides = [
-  { img: t1, name: "Waleed", role: "Volunteer", text: "Quick process and professional staff. Glad to help!" },
+  { img: t1, name: "Syed Waleed Ali", role: "Owner", text: "Quick process and professional staff. Glad to help!" },
   { img: t2, name: "Umar", role: "Donor", text: "Found the nearest drive and booked in minutes." },
   { img: t3, name: "Sara", role: "Nurse", text: "Reliable supply and efficient matching for patients." },
   { img: t4, name: "Hassan", role: "Student", text: "Friendly team and clear instructions throughout." },

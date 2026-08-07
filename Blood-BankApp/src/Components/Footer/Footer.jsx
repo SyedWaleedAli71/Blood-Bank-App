@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import FBIcon from "../../assets/Images/FB 4.jpg";
+
 
 import {
   Heart,
@@ -91,6 +93,7 @@ export default function Footer() {
               className="social-facebook"
             >
               f
+              {/* <img src={FBIcon} alt="Facebook" /> */}
             </a>
 
             <a
@@ -204,8 +207,8 @@ export default function Footer() {
 
             <Mail size={19} />
 
-            <a href="mailto:info@bloodbank.com">
-              info@bloodbank.com
+            <a href="mailto:syedwaleed887@gmail.com">
+              syedwaleed887@gmail.com
             </a>
 
           </div>
