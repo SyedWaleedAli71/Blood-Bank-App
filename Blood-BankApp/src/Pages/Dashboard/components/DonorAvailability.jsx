@@ -12,7 +12,7 @@ import "./DonorAvailability.css";
 
 const donors = [
   {
-    name: "Syed Waleed",
+    name: "Syed Waleed Ali",
     group: "O+",
     location: "Karachi",
     status: "Available",
@@ -28,7 +28,7 @@ const donors = [
     phone: "03122166216",
   },
   {
-    name: "Dawwod Shakeel",
+    name: "Dawood Shakeel",
     group: "B+",
     location: "Islamabad",
     status: "Available",
