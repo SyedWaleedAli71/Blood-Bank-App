@@ -9,14 +9,12 @@ import Contact from "./Pages/Contact/contact";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import UserDashboard from "./Pages/UserDashboard/UserDashboard";
 
-
 import Footer from "./Components/Footer/Footer.jsx";
 import WhatsAppButton from "./Components/WhatsAppButton/WhatsAppButton.jsx";
+import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute.jsx";
 
 import Signup from "./Pages/Auth/Signup.jsx";
 import Login from "./Pages/Auth/Login.jsx";
-
-
 
 function App() {
   return (
@@ -30,8 +28,23 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
 
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/user-dashboard" element={<UserDashboard />} />
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute allowedRole="admin">
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/user-dashboard"
+          element={
+            <ProtectedRoute allowedRole="user">
+              <UserDashboard />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
       <Footer />
       <WhatsAppButton />
